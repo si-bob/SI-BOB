@@ -11,17 +11,13 @@ import lombok.Getter;
 @Getter
 @Validated
 @ConstructorBinding
-@ConfigurationProperties(prefix = "secret")
+@ConfigurationProperties(prefix = "jwt")
 public class ConfigProperties {
 
 	@NotBlank
-	private final String jwtSecret;
+	private final String secret;
 
-	@NotBlank
-	private final String userInfoPasswordKey;
-
-	public ConfigProperties(String jwtSecret, String userInfoPasswordKey) {
-		this.jwtSecret = jwtSecret;
-		this.userInfoPasswordKey = userInfoPasswordKey;
+	public ConfigProperties(String secret) {
+		this.secret = secret;
 	}
 }

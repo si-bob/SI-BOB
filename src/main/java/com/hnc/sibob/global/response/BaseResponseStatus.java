@@ -19,9 +19,9 @@ public enum BaseResponseStatus {
 	 */
 	// Common
 	REQUEST_ERROR(false, 2000, "입력값을 확인해주세요."),
-	EMPTY_JWT(false, 2001, "JWT를 입력해주세요."),
-	INVALID_JWT(false, 2002, "유효하지 않은 JWT입니다."),
-	INVALID_USER_JWT(false, 2003, "권한이 없는 유저의 접근입니다."),
+	// EMPTY_JWT(false, 2001, "JWT를 입력해주세요."),
+	// INVALID_JWT(false, 2002, "유효하지 않은 JWT입니다."),
+	// INVALID_USER_JWT(false, 2003, "권한이 없는 유저의 접근입니다."),
 	CHECK_PASSWORD(false, 2004, "비밀번호가 일치하지 않습니다."),
 	CHECK_USER(false, 2005, "유효하지 않은 계정입니다."),
 	INVALID_URI_PATH(false, 2006, "URI 경로가 잘못되었습니다."),
@@ -60,6 +60,13 @@ public enum BaseResponseStatus {
 
 	INVALID_DISTRICT_CODE(false, 2040, "존재하지 않는 지역코드입니다."),
 	SEARCHED_DUPLICATE_REGION(false, 2041, "해당 코드에 대해 중복된 지역이 검출되었습니다."),
+
+	// [2400:JWT 에러]
+	EMPTY_JWT(false, 2401, "JWT를 입력해주세요."),
+	INVALID_JWT(false, 2402, "유효하지 않은 JWT입니다."),
+	INVALID_USER_JWT(false, 2403, "권한이 없는 유저의 접근입니다."),
+	EXPIRE_JWT(false, 2404, "만료된 JWT 토큰입니다."),
+	UNSUPPORTED_JWT(false, 2405, "지원되지 않은 토큰입니다."),
 
 	/**
 	 * 3000 : Response 오류
